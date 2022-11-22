@@ -1,0 +1,144 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import search from "../assets/img/icon/search.png";
+import logo from "../assets/img//logo.png";
+import heart from "../assets/img/icon/heart.png";
+import cart from "../assets/img/icon/cart.png";
+
+const Header = () => {
+  return (
+    <>
+      <div className="offcanvas-menu-overlay"></div>
+      <div className="offcanvas-menu-wrapper">
+        <div className="offcanvas__option">
+          <div className="offcanvas__links">
+            <Link to="/">Sign in</Link>
+            <Link to="/">FAQs</Link>
+          </div>
+          <div className="offcanvas__top__hover">
+            <span>
+              Usd <i className="arrow_carrot-down"></i>
+            </span>
+            <ul>
+              <li>USD</li>
+              <li>EUR</li>
+              <li>USD</li>
+            </ul>
+          </div>
+        </div>
+        <div className="offcanvas__nav__option">
+          <Link to="/" className="search-switch">
+            <img src={search} alt="img"></img>
+          </Link>
+
+          <div className="price">$0.00</div>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div className="offcanvas__text">
+          <p>Free shipping, 30-day return or refund guarantee.</p>
+        </div>
+      </div>
+
+      {/* Header Section Begin */}
+      <header class="header">
+        <div class="header__top">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 col-md-7">
+                <div class="header__top__left">
+                  <p>Free shipping, 30-day return or refund guarantee.</p>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-5">
+                <div class="header__top__right">
+                  <div class="header__top__links">
+                    <Link to="/">Sign in</Link>
+                    <Link to="/">FAQs</Link>
+                  </div>
+                  <div class="header__top__hover">
+                    <span>
+                      Usd <i class="arrow_carrot-down"></i>
+                    </span>
+                    <ul>
+                      <li>USD</li>
+                      <li>EUR</li>
+                      <li>USD</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-3">
+              <div class="header__logo">
+                <Link to="./index.html">
+                  <img src={logo} alt="logo" />
+                </Link>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+              <nav class="header__menu mobile-menu">
+                <ul>
+                  <li>
+                    <Link to="./index.html">Home</Link>
+                  </li>
+                  <li>
+                    <Link to="./shop.html">Shop</Link>
+                  </li>
+                  <li>
+                    <Link to="/">Pages</Link>
+                    <ul class="dropdown">
+                      <li>
+                        <Link to="./about.html">About Us</Link>
+                      </li>
+                      <li>
+                        <Link to="./shop-details.html">Shop Details</Link>
+                      </li>
+                      <li>
+                        <Link to="./shopping-cart.html">Shopping Cart</Link>
+                      </li>
+                      <li>
+                        <Link to="./checkout.html">Check Out</Link>
+                      </li>
+                      <li>
+                        <Link to="./blog-details.html">Blog Details</Link>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="active">
+                    <Link to="./blog.html">Blog</Link>
+                  </li>
+                  <li>
+                    <a href="./contact.html">Contacts</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col-lg-3 col-md-3">
+              <div class="header__nav__option">
+                <Link to="/" className="search-switch">
+                  <img src={search} alt="img" />
+                </Link>
+                <Link to="/">
+                  <img src={heart} alt="img" />
+                </Link>
+                <Link to="/">
+                  <img src={cart} alt="img" /> <span>0</span>
+                </Link>
+                <div class="price">$0.00</div>
+              </div>
+            </div>
+          </div>
+          <div class="canvas__open">
+            <i class="fa fa-bars"></i>
+          </div>
+        </div>
+      </header>
+    </>
+  );
+};
+
+export default Header;
