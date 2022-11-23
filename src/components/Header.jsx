@@ -92,19 +92,19 @@ const Header = () => {
                     <Link to="#">Pages</Link>
                     <ul className="dropdown">
                       <li>
-                        <Link to="./about.html">About Us</Link>
+                        <Link to="aboutus">About Us</Link>
                       </li>
                       <li>
-                        <Link to="./shop-details.html">Shop Details</Link>
+                        <Link to="shopdetails">Shop Details</Link>
                       </li>
                       <li>
-                        <Link to="./shopping-cart.html">Shopping Cart</Link>
+                        <Link to="shoppingcart">Shopping Cart</Link>
                       </li>
                       <li>
-                        <Link to="./checkout.html">Check Out</Link>
+                        <Link to="checkout">Check Out</Link>
                       </li>
                       <li>
-                        <Link to="./blog-details.html">Blog Details</Link>
+                        <Link to="blogdetails">Blog Details</Link>
                       </li>
                     </ul>
                   </li>
