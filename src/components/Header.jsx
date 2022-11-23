@@ -40,24 +40,24 @@ const Header = () => {
       </div>
 
       {/* Header Section Begin */}
-      <header class="header">
-        <div class="header__top">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-6 col-md-7">
-                <div class="header__top__left">
+      <header className="header">
+        <div className="header__top">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-6 col-md-7">
+                <div className="header__top__left">
                   <p>Free shipping, 30-day return or refund guarantee.</p>
                 </div>
               </div>
-              <div class="col-lg-6 col-md-5">
-                <div class="header__top__right">
-                  <div class="header__top__links">
+              <div className="col-lg-6 col-md-5">
+                <div className="header__top__right">
+                  <div className="header__top__links">
                     <Link to="/">Sign in</Link>
                     <Link to="/">FAQs</Link>
                   </div>
-                  <div class="header__top__hover">
+                  <div className="header__top__hover">
                     <span>
-                      Usd <i class="arrow_carrot-down"></i>
+                      Usd <i className="arrow_carrot-down"></i>
                     </span>
                     <ul>
                       <li>USD</li>
@@ -70,17 +70,17 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-3">
-              <div class="header__logo">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-3 col-md-3">
+              <div className="header__logo">
                 <Link to="./index.html">
                   <img src={logo} alt="logo" />
                 </Link>
               </div>
             </div>
-            <div class="col-lg-6 col-md-6">
-              <nav class="header__menu mobile-menu">
+            <div className="col-lg-6 col-md-6">
+              <nav className="header__menu mobile-menu">
                 <ul>
                   <li>
                     <Link to="./index.html">Home</Link>
@@ -90,7 +90,7 @@ const Header = () => {
                   </li>
                   <li>
                     <Link to="/">Pages</Link>
-                    <ul class="dropdown">
+                    <ul className="dropdown">
                       <li>
                         <Link to="./about.html">About Us</Link>
                       </li>
@@ -108,7 +108,7 @@ const Header = () => {
                       </li>
                     </ul>
                   </li>
-                  <li class="active">
+                  <li className="active">
                     <Link to="./blog.html">Blog</Link>
                   </li>
                   <li>
@@ -117,8 +117,8 @@ const Header = () => {
                 </ul>
               </nav>
             </div>
-            <div class="col-lg-3 col-md-3">
-              <div class="header__nav__option">
+            <div className="col-lg-3 col-md-3">
+              <div className="header__nav__option">
                 <Link to="/" className="search-switch">
                   <img src={search} alt="img" />
                 </Link>
@@ -128,12 +128,12 @@ const Header = () => {
                 <Link to="/">
                   <img src={cart} alt="img" /> <span>0</span>
                 </Link>
-                <div class="price">$0.00</div>
+                <div className="price">$0.00</div>
               </div>
             </div>
           </div>
-          <div class="canvas__open">
-            <i class="fa fa-bars"></i>
+          <div className="canvas__open">
+            <i className="fa fa-bars"></i>
           </div>
         </div>
       </header>
