@@ -83,10 +83,10 @@ const Header = () => {
               <nav className="header__menu mobile-menu">
                 <ul>
                   <li>
-                    <Link to="./index.html">Home</Link>
+                    <Link to="/">Home</Link>
                   </li>
                   <li>
-                    <Link to="./shop.html">Shop</Link>
+                    <Link to="shop">Shop</Link>
                   </li>
                   <li>
                     <Link to="/">Pages</Link>
@@ -109,10 +109,10 @@ const Header = () => {
                     </ul>
                   </li>
                   <li className="active">
-                    <Link to="./blog.html">Blog</Link>
+                    <Link to="blog">Blog</Link>
                   </li>
                   <li>
-                    <a href="./contact.html">Contacts</a>
+                    <Link to="contacts">Contacts</Link>
                   </li>
                 </ul>
               </nav>
