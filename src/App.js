@@ -21,11 +21,11 @@ function App() {
         <Route path="shop" element={<Shop />} />
         <Route path="blog" element={<Blog />} />
         <Route path="contacts" element={<Contacts />} />
-        <Route path="aboutus" element={<AboutUs />} />
-        <Route path="blogdetails" element={<BlogDetails />} />
+        <Route path="about-us" element={<AboutUs />} />
+        <Route path="blog-details" element={<BlogDetails />} />
         <Route path="checkout" element={<CheckOut />} />
-        <Route path="shopdetails" element={<ShopDetails />} />
-        <Route path="shoppingcart" element={<ShopppingCart />} />
+        <Route path="shop-details" element={<ShopDetails />} />
+        <Route path="shopping-cart" element={<ShopppingCart />} />
       </Routes>
       <Footer />
     </>
