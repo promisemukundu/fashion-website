@@ -18,7 +18,7 @@ const Banner = () => {
                 </div>
                 <div className="banner__item__text">
                   <h2>Clothing Collections 2030</h2>
-                  <Link to="#">Shop now</Link>
+                  <Link to="shop">Shop now</Link>
                 </div>
               </div>
             </div>
@@ -29,7 +29,7 @@ const Banner = () => {
                 </div>
                 <div className="banner__item__text">
                   <h2>Accessories</h2>
-                  <Link to="#">Shop now</Link>
+                  <Link to="shop">Shop now</Link>
                 </div>
               </div>
             </div>
@@ -40,7 +40,7 @@ const Banner = () => {
                 </div>
                 <div className="banner__item__text">
                   <h2>Shoes Spring 2030</h2>
-                  <Link to="#">Shop now</Link>
+                  <Link to="shop">Shop now</Link>
                 </div>
               </div>
             </div>

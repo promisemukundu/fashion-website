@@ -9,14 +9,25 @@ const Hero = () => {
   const images = [hero1, hero2];
 
   const arrowLeftHandler = () => {
-    photo > 0 &&
-      setPhoto((photo) => {
-        return photo - 1;
-      });
+    setPhoto((photo) => {
+      const newPosition = photo - 1;
+      if (newPosition < 0) {
+        return images.length - 1;
+      }
+
+      return newPosition;
+    });
   };
 
   const arrowRightHandler = () => {
-    photo < images.length - 1 && setPhoto((photo) => photo + 1);
+    setPhoto((photo) => {
+      const newPosition = photo + 1;
+      if (newPosition > images.length - 1) {
+        return 0;
+      }
+
+      return newPosition;
+    });
   };
 
   return (
@@ -68,14 +79,14 @@ const Hero = () => {
           </div>
         </div>
 
-        <div class="owl-nav">
+        <div className="owl-nav">
           <button
             onClick={arrowLeftHandler}
             type="button"
             role="presentation"
-            class="owl-prev"
+            className="owl-prev"
           >
-            <span class="arrow_left">
+            <span className="arrow_left">
               <span></span>
             </span>
           </button>
@@ -83,9 +94,9 @@ const Hero = () => {
             onClick={arrowRightHandler}
             type="button"
             role="presentation"
-            class="owl-next"
+            className="owl-next"
           >
-            <span class="arrow_right">
+            <span className="arrow_right">
               <span></span>
             </span>
           </button>
