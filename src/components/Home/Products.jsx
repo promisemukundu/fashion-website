@@ -7,6 +7,7 @@ import search from "../../assets/img/icon/search.png";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     axios
@@ -16,6 +17,14 @@ const Products = () => {
 
   console.log(products);
 
+  useEffect(() => {
+    axios
+      .get("https://fakestoreapi.com/products/categories")
+      .then((response) => setCategories(response.data));
+  }, []);
+
+  console.log(categories);
+
   return (
     <>
       <section className="product spad">
@@ -23,11 +32,11 @@ const Products = () => {
           <div className="row">
             <div className="col-lg-12">
               <ul className="filter__controls">
-                <li className="active" data-filter="*">
-                  Best Sellers
-                </li>
-                <li data-filter=".new-arrivals">New Arrivals</li>
-                <li data-filter=".hot-sales">Hot Sales</li>
+                {categories.map((cate) => (
+                  <li className="active" data-filter="*">
+                    {cate.charAt(0).toUpperCase() + cate.slice(1)}
+                  </li>
+                ))}
               </ul>
             </div>
             {products.map((prod) => (
@@ -37,7 +46,7 @@ const Products = () => {
                     className="product__item__pic set-bg"
                     style={{ backgroundImage: `url(${prod.image})` }}
                   >
-                    <span className="label">New</span>
+                    <span className="label">{prod.category}</span>
                     <ul className="product__hover">
                       <li>
                         <Link to="#">
