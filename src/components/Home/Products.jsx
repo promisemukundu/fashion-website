@@ -1,20 +1,26 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+
+import { useDispatch, useSelector } from "react-redux";
+import { getProducts } from "../../store/http-slice";
+
 import { Link } from "react-router-dom";
 import heart from "../../assets/img/icon/heart.png";
 import compare from "../../assets/img/icon/compare.png";
 import search from "../../assets/img/icon/search.png";
 
 const Products = () => {
-  const [products, setProducts] = useState([]);
+
+  const dispatch = useDispatch()
+  const products = useSelector(state => state.http.products)
+
+ 
   const [categories, setCategories] = useState([]);
   const [filterCategory, setFilterCategory] = useState();
 
   useEffect(() => {
-    axios
-      .get("https://fakestoreapi.com/products")
-      .then((response) => setProducts(response.data));
-  }, []);
+   dispatch(getProducts())
+  }, [dispatch]);
 
   console.log(products);
 
