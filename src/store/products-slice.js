@@ -1,5 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
 
+export const productsSliceName = 'products';
+
 export const getProducts = createAsyncThunk('products/getProducts',
 
     async () => {
@@ -11,8 +13,8 @@ export const getProducts = createAsyncThunk('products/getProducts',
 
 )
 
-const httpSlice = createSlice({
-    name: 'http',
+const productsSlice = createSlice({
+    name: productsSliceName,
     initialState: {
         products: [],
         // isLoading: false
@@ -30,6 +32,6 @@ const httpSlice = createSlice({
     }
 })
 
-export const httpActions = httpSlice.actions
+export const httpActions = productsSlice.actions
 
-export default httpSlice
+export default productsSlice

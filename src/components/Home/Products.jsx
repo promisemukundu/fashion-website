@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
-import { getProducts } from "../../store/http-slice";
+import { getProducts, productsSliceName } from "../../store/products-slice";
 
 import { Link } from "react-router-dom";
 import heart from "../../assets/img/icon/heart.png";
@@ -12,7 +12,7 @@ import search from "../../assets/img/icon/search.png";
 const Products = () => {
 
   const dispatch = useDispatch()
-  const products = useSelector(state => state.http.products)
+  const products = useSelector(state => state[productsSliceName].products)
 
  
   const [categories, setCategories] = useState([]);

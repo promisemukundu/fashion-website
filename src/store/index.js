@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import httpSlice from './http-slice'
+import productsSlice, { productsSliceName } from './products-slice'
 
 const store = configureStore({
-    reducer: { http: httpSlice.reducer }
+    reducer: { [productsSliceName]: productsSlice.reducer }
 })
 
 export default store
