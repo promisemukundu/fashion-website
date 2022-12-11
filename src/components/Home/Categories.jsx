@@ -2,7 +2,19 @@ import React from "react";
 import { Link } from "react-router-dom";
 import sale from "../../assets/img/product-sale.png";
 
+
+import { useSelector } from "react-redux";
+import {  productsSliceName } from "../../store/products-slice";
+
 const Categories = () => {
+
+
+  const products = useSelector(state => state[productsSliceName].products)
+
+
+
+  const randomImage = products[(Math.floor(Math.random( ) * (products.length)))]
+
   return (
     <>
       <section className="categories spad">
@@ -18,10 +30,10 @@ const Categories = () => {
             </div>
             <div className="col-lg-4">
               <div className="categories__hot__deal">
-                <img src={sale} alt="img" />
+                <img src={randomImage ? randomImage.image : sale} alt="img" />
                 <div className="hot__deal__sticker">
                   <span>Sale Of</span>
-                  <h5>$29.99</h5>
+                  <h5>{randomImage ? randomImage.price : sale}</h5>
                 </div>
               </div>
             </div>
