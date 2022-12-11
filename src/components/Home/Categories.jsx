@@ -12,14 +12,8 @@ const Categories = () => {
   const products = useSelector(state => state[productsSliceName].products)
 
 
-  console.log(products);
 
   const randomImage = products[(Math.floor(Math.random( ) * (products.length)))]
-  //const image = randomImage
-
-  console.log(randomImage);
-  //console.log(randomImage.image);
-  
 
   return (
     <>

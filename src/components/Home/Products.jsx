@@ -22,7 +22,6 @@ const Products = () => {
    dispatch(getProducts())
   }, [dispatch]);
 
-  console.log(products);
 
   useEffect(() => {
     axios
@@ -30,7 +29,6 @@ const Products = () => {
       .then((response) => setCategories(response.data));
   }, []);
 
-  console.log(categories);
 
   return (
     <>
