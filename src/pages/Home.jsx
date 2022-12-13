@@ -6,7 +6,7 @@ import Instagram from "../components/Home/Instagram";
 import LatestBlog from "../components/Home/LatestBlog";
 import Products from "../components/Home/Products";
 
-const Home = () => {
+const Home = (props) => {
   return (
     <>
       <Hero />
@@ -14,7 +14,7 @@ const Home = () => {
       <Products />
       <Categories />
       <Instagram />
-      <LatestBlog />
+      <LatestBlog pageSize={3}/>
     </>
   );
 };
