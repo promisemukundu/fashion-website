@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import calendar from "../../assets/img/icon/calendar.png";
 
 
-const LatestBlog = () => {
+const LatestBlog = (props) => {
   const [news, setNews] = useState([]);
 
   useEffect(() => {
@@ -15,8 +15,8 @@ const LatestBlog = () => {
           q: 'fashion',
           searchIn: 'title',
           sortBy: 'relevancy',
-          pageSize: 3
-        }
+          pageSize: props.pageSize
+       }
       })
       .then((response) => {
         console.log(response);
@@ -25,14 +25,15 @@ const LatestBlog = () => {
   }, []);
 
   console.log(news);
+  
   return (
     <>
       <section className="latest spad">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <div clasName="section-title">
-                <span>Latest News</span>
+              <div className="section-title">
+                <span>Latest News {}</span>
                 <h2>Fashion New Trends</h2>
               </div>
             </div>
