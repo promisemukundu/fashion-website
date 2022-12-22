@@ -6,6 +6,9 @@ import calendar from "../../assets/img/icon/calendar.png";
 
 const LatestBlog = (props) => {
   const [news, setNews] = useState([]);
+ 
+
+  
 
   useEffect(() => {
     axios
@@ -24,6 +27,8 @@ const LatestBlog = (props) => {
       });
   }, []);
 
+  
+
   console.log(news);
   
   return (
@@ -39,7 +44,7 @@ const LatestBlog = (props) => {
             </div>
           </div>
           <div className="row">
-            {news.map((infor) => (
+            {news.map((infor, index) => (
               <div className="col-lg-4 col-md-6 col-sm-6">
                 <div className="blog__item">
                   <div
@@ -51,7 +56,7 @@ const LatestBlog = (props) => {
                       <img src={calendar} alt="img" /> {infor.publishedAt}
                     </span>
                     <h5>{infor.title}</h5>
-                    <Link to="#">Read More</Link>
+                    <Link to={`/blog-details/${index}`}>Read More</Link>
                   </div>
                 </div>
               </div>
