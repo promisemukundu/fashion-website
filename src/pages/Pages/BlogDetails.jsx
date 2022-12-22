@@ -10,11 +10,6 @@ const params = useParams()
 
 const id = params
 
-
-
-console.log(params);
-
-
  useEffect(() => {
     axios
       .get('https://newsapi.org/v2/everything', {
@@ -30,11 +25,6 @@ console.log(params);
         setNews(response.data.articles[params.id]);
       });
   }, []);
-
-  
- 
-  console.log(news);
-  console.log('kkkkkk');
 
   return <>
   {news && <>

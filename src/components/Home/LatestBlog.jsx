@@ -7,10 +7,7 @@ import calendar from "../../assets/img/icon/calendar.png";
 const LatestBlog = (props) => {
   const [news, setNews] = useState([]);
  
-
-  
-
-  useEffect(() => {
+ useEffect(() => {
     axios
       .get('https://newsapi.org/v2/everything', {
         params: {
