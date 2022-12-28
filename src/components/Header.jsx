@@ -95,16 +95,10 @@ const Header = () => {
                         <Link to="about-us">About Us</Link>
                       </li>
                       <li>
-                        <Link to="shop-details">Shop Details</Link>
-                      </li>
-                      <li>
                         <Link to="shopping-cart">Shopping Cart</Link>
                       </li>
                       <li>
                         <Link to="checkout">Check Out</Link>
-                      </li>
-                      <li>
-                        <Link to="blog-details">Blog Details</Link>
                       </li>
                     </ul>
                   </li>

@@ -4,16 +4,20 @@ import sale from "../../assets/img/product-sale.png";
 
 
 import { useSelector } from "react-redux";
-import {  productsSliceName } from "../../store/products-slice";
+import { productsSliceName } from "../../store/products-slice";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const Categories = () => {
+  const [product, setProduct] = useState();
 
+  const products = useSelector(state => state[productsSliceName].products);
 
-  const products = useSelector(state => state[productsSliceName].products)
+  useEffect(() => {
+    const randomProduct = products[(Math.floor(Math.random() * (products.length)))];
+    setProduct(randomProduct);
+  }, [products]);
 
-
-
-  const randomImage = products[(Math.floor(Math.random( ) * (products.length)))]
 
   return (
     <>
@@ -29,13 +33,15 @@ const Categories = () => {
               </div>
             </div>
             <div className="col-lg-4">
-              <div className="categories__hot__deal">
-                <img src={randomImage ? randomImage.image : sale} alt="img" />
+
+
+              {product && <Link to={`/shop-details/${product.id}`} className="categories__hot__deal">
+                <img src={product ? product.image : sale} alt="img" />
                 <div className="hot__deal__sticker">
                   <span>Sale Of</span>
-                  <h5>{randomImage ? randomImage.price : sale}</h5>
+                  <h5>${product ? product.price.toFixed(2) : sale}</h5>
                 </div>
-              </div>
+              </Link>}
             </div>
             <div className="col-lg-4 offset-lg-1">
               <div className="categories__deal__countdown">
