@@ -59,8 +59,10 @@ const Products = () => {
               .map((prod) => (
                 <div className="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
                   <div className="product__item">
+                    <Link to={`/shop-details/${prod.id}`}>
                     <div
                       className="product__item__pic set-bg"
+                     
                       style={{ backgroundImage: `url(${prod.image})` }}
                     >
                       <span className="label">{prod.category}</span>
@@ -83,9 +85,10 @@ const Products = () => {
                         </li>
                       </ul>
                     </div>
+                    </Link>
                     <div className="product__item__text">
                       <h6>{prod.title}</h6>
-                      <Link to="#" className="add-cart">
+                      <Link to="shopping-cart" className="add-cart">
                         + Add To Cart
                       </Link>
                       <div className="rating">
